@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'General Sans';
+	src: url('../fonts/generalSans/GeneralSans-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	@media (min-width: 550px) {
+		max-width: 500px;
+	}
+}

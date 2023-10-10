@@ -1,0 +1,20 @@
+.bg {
+	display: flex;
+	padding: 10px 22px;
+	align-items: center;
+	gap: 10px;
+	border-radius: 60px;
+	border: 1px solid #373334;
+	background-color: transparent;
+	color: #373334;
+	font-family: 'General Sans', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 110% */
+	letter-spacing: -0.4px;
+	text-decoration: none;
+}
+.imgFirst {
+	order: -1;
+}

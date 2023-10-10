@@ -1,0 +1,91 @@
+.bg {
+	font-family: 'General Sans', sans-serif;
+	padding: 50px 16px 40px;
+	@media (min-width: 550px) {
+		max-width: 700px;
+		margin: auto;
+	}
+}
+.buttonCnt {
+	display: flex;
+	align-items: center;
+	margin-bottom: 26px;
+	justify-content: space-between;
+}
+.buttonPadding {
+	padding: 8px 22px !important;
+}
+.imgCnt {
+	text-align: center;
+	margin-bottom: 42px;
+}
+.heading {
+	color: #373334;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 56px;
+	letter-spacing: -0.84px;
+	margin-bottom: 14px;
+}
+.description {
+	color: #373334;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 200;
+	line-height: 22px; /* 157.143% */
+	letter-spacing: -0.28px;
+	margin-bottom: 16px;
+}
+.para {
+	color: #373334;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px;
+	letter-spacing: -0.28px;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin: 62px 0 42px;
+}
+.input {
+	border-radius: 8px;
+	border: 1px solid #c2c8cc;
+	box-shadow: 0px 1px 4px 0px rgba(16, 24, 40, 0.05);
+	padding: 10px 14px;
+	color: #68737d;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+}
+.qedLogo {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	color: #373334;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 100;
+	line-height: 28px; /* 200% */
+	letter-spacing: -0.28px;
+}
+.lastSection {
+	margin-top: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #1f1f1f;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 36px; /* 180% */
+	letter-spacing: -0.4px;
+}
+.proceed {
+	cursor: pointer;
+}
