@@ -55,6 +55,7 @@ const ThankYou = (props) => {
 							class="twitter-share-button"
 							href={`https://twitter.com/intent/tweet?text=${text}&url= `}
 							data-size="large"
+							target="_blank"
 						>
 							<TwitterIcon round />
 						</a>
