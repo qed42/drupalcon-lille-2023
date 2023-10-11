@@ -1,7 +1,7 @@
 import styles from '../thank-you/index.module.css';
 import { useState } from 'react';
 import Button from '../../components/Button';
-import { TwitterShareButton, LinkedinShareButton } from 'react-share';
+import { LinkedinShareButton } from 'react-share';
 import { LinkedinIcon, TwitterIcon } from 'react-share';
 import Modal from 'react-modal';
 
@@ -15,6 +15,8 @@ const ThankYou = (props) => {
 	function closeModal() {
 		setIsOpen(false);
 	}
+	let text =
+		'Received%20this%20fantastic%20%23Drupal%20Hindi%20T-shirt%20from%20@qed42%20at%20%23DrupalConLille';
 
 	return (
 		<div className={styles.bg}>
@@ -49,14 +51,13 @@ const ThankYou = (props) => {
 					className={styles.modal}
 				>
 					<div className={styles.icons}>
-						<TwitterShareButton
-							title={
-								'Received this fantastic #Drupal Hindi T-shirt from @qed42 at #DrupalConLille'
-							}
-							url={' '}
+						<a
+							class="twitter-share-button"
+							href={`https://twitter.com/intent/tweet?text=${text}&url= `}
+							data-size="large"
 						>
 							<TwitterIcon round />
-						</TwitterShareButton>
+						</a>
 						<LinkedinShareButton
 							title="Received this fantastic #Drupal Hindi T-shirt from @qed42 at #DrupalConLille"
 							url={'https://www.qed42.com/'}
