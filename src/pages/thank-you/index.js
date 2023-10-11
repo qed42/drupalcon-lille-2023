@@ -30,7 +30,7 @@ const ThankYou = (props) => {
 			<div>
 				<div className={styles.heading}>Thank you for your participation!</div>
 				<div className={styles.description}>
-					Post a picture on social media wearing our T-shirts and get a chance
+					Post a picture on social media wearing our T-shirts and stand a chance
 					to win an exciting prize!
 				</div>
 			</div>
