@@ -1,0 +1,20 @@
+.bg {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	gap: 10px;
+
+	background-color: transparent;
+	color: #373334;
+	font-family: 'General Sans', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 100;
+	line-height: 20px; /* 166.667% */
+	letter-spacing: -0.24px;
+	text-decoration: none;
+}
+.imgFirst {
+	order: -1;
+}

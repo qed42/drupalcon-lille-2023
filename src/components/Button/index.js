@@ -9,6 +9,8 @@ export default function Button({
 	className,
 	onClick = () => {},
 	imageFirst = false,
+	imgClass,
+	target = '_self',
 }) {
 	return (
 		<a
@@ -17,10 +19,17 @@ export default function Button({
 			style={{ backgroundColor: bgColor || 'tranparent' }}
 			className={`${styles.bg} ${className ? className : ''}`}
 			disabled={disabled}
+			target={target}
 		>
 			{text}
 			{src && (
-				<img src={src} className={`${imageFirst ? styles.imgFirst : ''}`} />
+				<img
+					alt="logo"
+					src={src}
+					className={`${imageFirst ? styles.imgFirst : ''} ${
+						imgClass ? imgClass : ''
+					}`}
+				/>
 			)}
 		</a>
 	);

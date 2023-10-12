@@ -38,13 +38,10 @@
 	font-weight: 100;
 	line-height: 32px; /* 133.333% */
 	letter-spacing: -0.48px;
-	margin-bottom: 90px;
 }
 .qedLogo {
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-start;
+	gap: 70px;
 	color: #373334;
 	font-size: 14px;
 	font-style: normal;
@@ -53,10 +50,12 @@
 	letter-spacing: -0.28px;
 }
 .lastSection {
-	margin-top: 64px;
+	margin-top: 18px;
 	display: flex;
+	flex-direction: column;
+	gap: 14px;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	color: #1f1f1f;
 	font-size: 20px;
 	font-style: normal;
@@ -103,4 +102,50 @@
 	padding: 10px;
 	font-size: 18px;
 	font-weight: 400;
+}
+.spaceLogo {
+	flex-direction: column;
+	padding: 0 !important;
+	border-radius: 0 !important;
+	border-width: 0 !important;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	background-color: transparent;
+	color: #373334 !important;
+
+	font-size: 12px !important;
+	font-style: normal !important;
+	font-weight: 100 !important;
+	line-height: 20px !important; /* 166.667% */
+	letter-spacing: -0.24px !important;
+	text-decoration: none !important;
+}
+.spaceImg {
+	width: 100px;
+	height: 24px;
+}
+.line {
+	height: 1px;
+	border-width: 0;
+	background: #f3ece4;
+	width: 300px;
+}
+
+.followUs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 100;
+	line-height: 20px; /* 166.667% */
+	letter-spacing: -0.24px;
+	text-decoration: none;
+}
+.logos {
+	display: flex;
+	gap: 50px;
 }

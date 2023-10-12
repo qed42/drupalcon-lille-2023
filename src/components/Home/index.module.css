@@ -1,9 +1,10 @@
 .test {
 	background: #f3ece4;
+	min-height: 100vh;
 }
 .bg {
 	font-family: 'General Sans', sans-serif;
-	padding: 40px 0 0;
+	padding: 30px 0 0;
 	@media (min-width: 550px) {
 		max-width: 700px;
 		margin: auto;
@@ -72,7 +73,7 @@
 }
 .mainImg {
 	width: 100%;
-	margin: 18px 0 12px;
+	margin: 11px 0 0;
 	width: 300px;
 	@media (min-width: 700px) {
 		width: 430px;
@@ -84,11 +85,12 @@
 	margin: 10px 0;
 	align-items: center;
 	gap: 24px;
-	color: #9a9aa0;
+	color: #373334;
+
 	font-size: 22px;
 	font-style: normal;
 	font-weight: 100;
-	line-height: 36px;
+	line-height: 36px; /* 163.636% */
 	letter-spacing: -0.44px;
 }
 .lastSection {
@@ -108,46 +110,5 @@
 	letter-spacing: -0.28px;
 	@media (min-width: 550px) {
 		max-width: 200px;
-	}
-}
-.spaceSection {
-	background: #c8d7d2;
-	padding: 24px 16px;
-}
-.spaceText {
-	color: #373334;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 110%; /* 26.4px */
-	letter-spacing: -0.48px;
-	margin: 18px 0 8px;
-}
-.spaceDescription {
-	color: #373334;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 100;
-	line-height: 140%; /* 22.4px */
-	letter-spacing: -0.32px;
-}
-.spaceLink {
-	color: #373334;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 100;
-	line-height: 140%; /* 22.4px */
-	letter-spacing: -0.32px;
-	margin-top: 24px;
-}
-.aTag {
-	font-weight: 600;
-	color: #373334;
-}
-.spacebg {
-	font-family: 'General Sans', sans-serif;
-	@media (min-width: 550px) {
-		max-width: 700px;
-		margin: auto;
 	}
 }

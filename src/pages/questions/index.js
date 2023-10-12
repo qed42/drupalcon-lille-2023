@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import styles from '../questions/index.module.css';
 import Button from '../../components/Button';
+import Qed42 from '../../components/Qed42';
+import Header from '../../components/Header';
 
 const Questions = (props) => {
 	const [questions, setQuestions] = useState([
@@ -14,20 +16,25 @@ const Questions = (props) => {
 		{
 			question: 'What is the latest version of Drupal?',
 			answer: '',
-			icon: '/icon1.svg',
+			icon: '/icon2.svg',
 			identifier: 'drupal',
 			options: ['Drupal 10.1.5', 'Drupal 10.1.9', 'Drupal 9.5.11'],
 		},
 		{
 			question: 'What does Drupal mean to you?',
 			answer: '',
-			icon: '/icon1.svg',
+			icon: '/icon3.svg',
 			identifier: 'drupal',
 			options: [],
 		},
 	]);
 	const [activeIndex, setIndex] = useState(0);
 	const [errorMsg, setErrorMsg] = useState('');
+	const [showSpace, setShowSpace] = useState(false);
+	const crossClick = (e) => {
+		e.preventDefault();
+		setShowSpace(false);
+	};
 
 	const handleChange = (e) => {
 		const value = e.target.value;
@@ -48,22 +55,9 @@ const Questions = (props) => {
 			setErrorMsg('');
 
 			if (activeIndex + 1 === questions.length) {
-				// const formEle = document.querySelector('form');
-				// const formData = new FormData(formEle);
-				// console.log(formEle);
-				// //setMessage(questions);
-
-				// await fetch(
-				// 	'https://script.google.com/macros/s/AKfycbw3d0o9MJ8f8gGEDnJIxigWxRyYZefrr4guzgCul7x8HrrMEKgk1C167f3H3sgXzZum/exec',
-				// 	{
-				// 		method: 'POST',
-				// 		body: formData,
-				// 	}
-				// );
-				//setHref('/details');
-
-				// location.push('/details');
-				location.href = `/details/?questions=${JSON.stringify(questions)}`;
+				location.href = `/details/?questions=${JSON.stringify(
+					questions
+				)}&space=${JSON.stringify(showSpace)}`;
 			} else {
 				setIndex((prev) => {
 					return prev + 1;
@@ -75,6 +69,7 @@ const Questions = (props) => {
 		e.preventDefault();
 		if (activeIndex === 0) {
 			location.replace('/');
+			// location.replace(`/?space=${showSpace}`);
 		} else {
 			setErrorMsg('');
 			setIndex((prev) => {
@@ -82,9 +77,16 @@ const Questions = (props) => {
 			});
 		}
 	};
+	useEffect(() => {
+		const queryParams = new URLSearchParams(window.location.search);
+		if (queryParams.get('space')) {
+			setShowSpace(JSON.parse(queryParams.get('space')));
+		}
+	}, []);
 
 	return (
 		<div className={styles.test}>
+			{showSpace && <Header handleClick={crossClick} />}
 			<div className={styles.bg}>
 				<div className={styles.buttonCnt}>
 					<div className={styles.proceed} onClick={handleHomeClick}>
@@ -163,8 +165,7 @@ const Questions = (props) => {
 				</div>
 				<div className={styles.lastSection}>
 					<div className={styles.qedLogo}>
-						<div>Powered by</div>
-						<img src="/QED42.svg" alt="qed42" />
+						<Qed42 imageFirst />
 					</div>
 					<div className={styles.proceed} onClick={handleClick}>
 						<Button text="Save & Proceed" bgColor={'#B1BD98'} />

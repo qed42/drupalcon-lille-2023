@@ -1,0 +1,35 @@
+.spaceSection {
+	background: #373334;
+	padding: 16px;
+	color: #fff;
+}
+.spaceText {
+	margin: 8px 0;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+.spaceLink {
+	color: #fff;
+
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+.aTag {
+	font-weight: 700;
+	color: #fff;
+}
+.spacebg {
+	font-family: 'General Sans', sans-serif;
+	display: flex;
+	gap: 24px;
+	@media (min-width: 550px) {
+		justify-content: space-between;
+		max-width: 700px;
+		margin: auto;
+	}
+}
