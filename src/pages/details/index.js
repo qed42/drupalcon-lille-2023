@@ -67,8 +67,7 @@ const Details = (props) => {
 				<div>
 					<div className={styles.heading}>Stay in the Loop</div>
 					<div className={styles.description}>
-						While providing your contact information is completely optional, it
-						helps us keep you in the loop if you&#39;re a lucky winner.
+						This will help us connect with you if you are the lucky winner.
 					</div>
 					<div className={styles.para}>
 						Rest assured, your information will be kept confidential.
