@@ -32,8 +32,8 @@ const ThankYou = (props) => {
 			<div>
 				<div className={styles.heading}>Thank you for your participation!</div>
 				<div className={styles.description}>
-					Post a picture on social media wearing our T-shirts and stand a chance
-					to win an exciting prize!
+					Post your photo wearing our #DrupalHindiTee and tag us on social media
+					to stand a chance to win an Airpod!
 				</div>
 			</div>
 
