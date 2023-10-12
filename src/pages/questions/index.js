@@ -5,42 +5,6 @@ import Button from '../../components/Button';
 const Questions = (props) => {
 	const [questions, setQuestions] = useState([
 		{
-			question: 'Guess the name of this theme 👢?',
-			answer: '',
-			icon: '/icon2.svg',
-			identifier: 'design',
-			options: ['Bootstrap', 'Heels'],
-		},
-		{
-			question: 'Guess the name of this module 🍯?',
-			answer: '',
-			icon: '/icon2.svg',
-			identifier: 'design',
-			options: ['Claypot', 'Honeypot'],
-		},
-		{
-			question: 'Guess the module: 🕸️📃?',
-			answer: '',
-			icon: '/icon2.svg',
-			identifier: 'design',
-			options: ['Webform', 'Spiderweb'],
-		},
-		{
-			question: 'Guess the module 🚩?',
-			answer: '',
-			icon: '/icon2.svg',
-			identifier: 'design',
-			options: ['Flag', 'Symbol'],
-		},
-		{
-			question: 'Guess the module 📊?',
-			answer: '',
-			icon: '/icon2.svg',
-			identifier: 'design',
-			options: ['Statistics', 'Bar-chart'],
-		},
-
-		{
 			question: 'Who received the Aaron Winborn award this year?',
 			answer: '',
 			icon: '/icon1.svg',
