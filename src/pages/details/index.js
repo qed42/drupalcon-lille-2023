@@ -8,6 +8,7 @@ const Details = (props) => {
 	const [name, setName] = useState('');
 	const [company, setCompany] = useState('');
 	const [email, setEmail] = useState('');
+	const [error, setError] = useState('');
 
 	const [questions, setQuestions] = useState([]);
 	const [showSpace, setShowSpace] = useState(false);
@@ -30,13 +31,24 @@ const Details = (props) => {
 	};
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		await submitData();
+		var validRegex =
+			/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if (name === '') {
+			setError('Please provide your name');
+		} else if (email === '') {
+			setError('Please provide your email address');
+		} else if (!email.match(validRegex)) {
+			setError('Please provide valid email address');
+		} else {
+			setError('');
+			await submitData();
+		}
 	};
 
-	const handleSkip = async (e) => {
-		e.preventDefault();
-		await submitData();
-	};
+	// const handleSkip = async (e) => {
+	// 	e.preventDefault();
+	// 	await submitData();
+	// };
 
 	useEffect(() => {
 		const queryParams = new URLSearchParams(window.location.search);
@@ -52,13 +64,13 @@ const Details = (props) => {
 			<div className={styles.bg}>
 				<div className={styles.buttonCnt}>
 					<Button text="" href="/questions" src="/arrowLeft.svg" />
-					<div className={styles.proceed} onClick={handleSkip}>
+					{/* <div className={styles.proceed} onClick={handleSkip}>
 						<Button
 							className={styles.buttonPadding}
 							text="Skip"
 							//href="/questions"
 						/>
-					</div>
+					</div> */}
 					{/* </div> */}
 				</div>
 				<div className={styles.imgCnt}>
@@ -67,7 +79,8 @@ const Details = (props) => {
 				<div>
 					<div className={styles.heading}>Stay in the Loop</div>
 					<div className={styles.description}>
-						This will help us connect with you if you are the lucky winner.
+						While providing your contact information is completely optional, it
+						helps us keep you in the loop if you&#39;re a lucky winner.
 					</div>
 					<div className={styles.para}>
 						Rest assured, your information will be kept confidential.
@@ -102,7 +115,7 @@ const Details = (props) => {
 							name="company"
 							type="text"
 							value={company}
-							placeholder="Company"
+							placeholder="Company (optional)"
 							onChange={(e) => setCompany(e.target.value)}
 						/>
 						<input
@@ -113,6 +126,7 @@ const Details = (props) => {
 							placeholder="Email Address"
 							onChange={(e) => setEmail(e.target.value)}
 						/>
+						{error && <div className={styles.errorMsg}>*{error}</div>}
 					</form>
 				</div>
 				<div className={styles.lastSection}>

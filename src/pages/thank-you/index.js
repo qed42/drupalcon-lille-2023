@@ -64,7 +64,7 @@ const ThankYou = (props) => {
 						<Qed42 />
 						<Button
 							className={styles.spaceLogo}
-							href="/"
+							href="https://space-drupalconlille/"
 							text="Get Started"
 							src="space-logo.svg"
 							imgClass={styles.spaceImg}

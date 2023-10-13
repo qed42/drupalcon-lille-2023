@@ -10,7 +10,11 @@ export default function Header({ handleClick = () => {} }) {
 					</div>
 					<div className={styles.spaceLink}>
 						Sign up for Exclusive beta{' '}
-						<a className={styles.aTag} href="/" target="_blank">
+						<a
+							className={styles.aTag}
+							href="https://space-drupalconlille/#contact"
+							target="_blank"
+						>
 							access here
 						</a>
 					</div>
