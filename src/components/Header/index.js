@@ -12,7 +12,7 @@ export default function Header({ handleClick = () => {} }) {
 						Sign up for Exclusive beta{' '}
 						<a
 							className={styles.aTag}
-							href="https://space-drupalconlille/#contact"
+							href="https://space-drupalconlille.qed42.net/#contact"
 							target="_blank"
 						>
 							access here
